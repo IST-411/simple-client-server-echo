@@ -1,5 +1,12 @@
-//IST 411 - Team 3: Ahmed Metwoali, Alexa McInvaille, Elyse Swider, Ryan Waters
-//L01 Client/Server "Echo" Application
+/* 
+Project: L01 Group Work
+Purpose Details: Client-Server Echo Application
+Course: IST 411
+Author: Ahmed Metwoali, Alexa McInvaille, Elyse Swider, Ryan Waters
+Date Developed: 5/20/21
+Last Date Changed: 5/20/21
+Revision: 1
+*/
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,7 +22,6 @@ public class EchoServer {
     public static void main(String[] args) {
 
         System.out.println("Echo Server");
-        EchoClient echo = new EchoClient();
 
         try (ServerSocket serverSocket = new ServerSocket(8080)) {
             System.out.println("Waiting for connection...");

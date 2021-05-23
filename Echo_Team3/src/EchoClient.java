@@ -1,5 +1,12 @@
-//IST 411 - Team 3: Ahmed Metwoali, Alexa McInvaille, Elyse Swider, Ryan Waters
-//L01 Client/Server "Echo" Application
+/* 
+Project: L01 Group Work
+Purpose Details: Client-Server Echo Application
+Course: IST 411
+Author: Ahmed Metwoali, Alexa McInvaille, Elyse Swider, Ryan Waters
+Date Developed: 5/20/21
+Last Date Changed: 5/20/21
+Revision: 1
+ */
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,12 +27,10 @@ public class EchoClient {
             System.out.println("Waiting for connection.....");
             InetAddress localAddress = InetAddress.getLocalHost();
 
-            try (Socket clientSocket = new Socket(localAddress, 8080);
-                    PrintWriter out = new PrintWriter(
-                            clientSocket.getOutputStream(), true);
-                    BufferedReader br = new BufferedReader(
-                            new InputStreamReader(
-                                    clientSocket.getInputStream()))) {
+            try ( Socket clientSocket = new Socket(localAddress, 8080);  PrintWriter out = new PrintWriter(
+                    clientSocket.getOutputStream(), true);  BufferedReader br = new BufferedReader(
+                    new InputStreamReader(
+                            clientSocket.getInputStream()))) {
                 System.out.println("Connected to server");
                 Scanner scanner = new Scanner(System.in);
                 while (true) {
